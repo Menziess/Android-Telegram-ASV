@@ -64,7 +64,7 @@ android {
         debug {
             storeFile file("config/release.keystore")
             storePassword 'Password'
-            keyAlias 'alias'
+            keyAlias 'key'
             keyPassword 'Password'
             v2SigningEnabled true
         }
