@@ -36,10 +36,10 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive # Remove if you don't have to clone submodules
 
 before_script:
-  - mkdir $HOME/.android # For sdkmanager configs
+  - mkdir -p $HOME/.android # For sdkmanager configs
   - echo 'count=0' > $HOME/.android/repositories.cfg # Avoid warning
   - wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS_REV}.zip
-  - mkdir $PWD/android-sdk-linux
+  - mkdir -p $PWD/android-sdk-linux
   - unzip -qq android-sdk.zip -d $PWD/android-sdk-linux
   - export ANDROID_HOME=$PWD/android-sdk-linux
   - export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle # Remove if you don't need NDK
