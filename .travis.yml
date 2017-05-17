@@ -23,3 +23,24 @@ android:
     # if you need to run emulator(s) during your tests
     - sys-img-armeabi-v7a-android-22
     - sys-img-armeabi-v7a-android-17
+
+stages:
+
+  - build
+
+
+
+build:
+
+  stage: build
+
+  script:
+    
+    - ./gradlew assembleDebug --stacktrace
+  
+  artifacts:
+    
+    paths:
+ 
+    - app/build/outputs/
+
