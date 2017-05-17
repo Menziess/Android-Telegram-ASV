@@ -9,4 +9,3 @@ gradle.properties
 TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java
 TMessagesProj/.externalNativeBuild
 *.apk
-*.jks
