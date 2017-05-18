@@ -7,8 +7,8 @@ android:
   components:
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-    # - tools
-    # - platform-tools
+    - tools
+    - platform-tools
 
     # The BuildTools version used by your project
     - build-tools-25.0.3
@@ -43,13 +43,9 @@ before_install:
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
 
-before_script:
-    # Make sure the emulator has started before running tests
-    - ./wait_for_emulator
-
 script:
   # - ./gradlew assembleRelease --stacktrace --no-daemon
-  - ./gradlew connectedAndroidTest
+  - ./gradlew test
 
 notifications:
     slack: stefans:guQ4vRvf0Tyi2iDilb1rgQAj

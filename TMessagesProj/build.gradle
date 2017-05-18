@@ -103,16 +103,18 @@ android {
 
     defaultConfig.versionCode = 957
 
-    sourceSets.debug {
-        manifest.srcFile 'config/debug/AndroidManifest.xml'
-    }
+    sourceSets {
+        debug {
+            manifest.srcFile 'config/debug/AndroidManifest.xml'
+        }
 
-    sourceSets.release {
-        manifest.srcFile 'config/release/AndroidManifest.xml'
-    }
+        release {
+            manifest.srcFile 'config/release/AndroidManifest.xml'
+        }
 
-    sourceSets.foss {
-        manifest.srcFile 'config/foss/AndroidManifest.xml'
+        foss {
+            manifest.srcFile 'config/foss/AndroidManifest.xml'
+        }
     }
 
     productFlavors {
