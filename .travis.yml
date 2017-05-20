@@ -35,7 +35,7 @@ android:
     # if you need to run emulator(s) during your tests
     - extra-android-support # because I'm using support library
     # - sys-img-x86-android-25
-    - -img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
+    - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
 
 install: true
 
