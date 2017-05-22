@@ -34,8 +34,9 @@ android:
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
     - extra-android-support # because I'm using support library
-    # - sys-img-x86-android-25
-    - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
+    # - sys-img-x86-$ANDROID_TARGET
+    - sys-img-armeabi-v7a-$ANDROID_API_LEVEL
+    # - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
 
 install: true
 
@@ -64,9 +65,9 @@ script:
 notifications:
     slack: stefans:guQ4vRvf0Tyi2iDilb1rgQAj
 
-# cache:
-#   apt: true
-#   directories:
-#     - ${TRAVIS_BUILD_DIR}/gradle/caches/
-#     - ${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/
-#     - ${TRAVIS_BUILD_DIR}/android-sdk/extras/
+cache:
+  apt: true
+  directories:
+    - ${TRAVIS_BUILD_DIR}/gradle/caches/
+    - ${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/
+    - ${TRAVIS_BUILD_DIR}/android-sdk/extras/
