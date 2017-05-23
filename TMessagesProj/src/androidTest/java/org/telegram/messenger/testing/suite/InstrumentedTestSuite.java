@@ -1,8 +1,9 @@
 package org.telegram.messenger.testing.suite;
 
-import org.telegram.messenger.SendMessagesHelperTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
+
+import org.telegram.messenger.SendMessagesTest;
 
 /**
  * Created by Stefan on 18-May-17.
@@ -12,7 +13,7 @@ import org.junit.runners.Suite;
 // Runs all unit tests.
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        SendMessagesHelperTest.class
+        SendMessagesTest.class
 })
 
-public class MainTestSuite {}
+public class InstrumentedTestSuite {}

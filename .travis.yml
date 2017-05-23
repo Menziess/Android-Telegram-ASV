@@ -50,8 +50,8 @@ before_script:
   # - ./wait_for_emulator
 
 script:
-  # - ./gradlew assembleRelease --stacktrace --no-daemon
-  - ./gradlew cC #Connected Check
+  - ./gradlew assembleRelease --stacktrace --no-daemon
+  # - ./gradlew cC #Connected Check
 
 notifications:
     slack: stefans:guQ4vRvf0Tyi2iDilb1rgQAj
