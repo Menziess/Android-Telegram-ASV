@@ -59,6 +59,6 @@ notifications:
 cache:
   apt: true
   directories:
-    - ${TRAVIS_BUILD_DIR}/gradle/caches/
-    - ${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/
-    - ${TRAVIS_BUILD_DIR}/android-sdk/extras/
+    # - ${TRAVIS_BUILD_DIR}/gradle/caches/
+    # - ${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/
+    # - ${TRAVIS_BUILD_DIR}/android-sdk/extras/
