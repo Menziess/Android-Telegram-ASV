@@ -13,11 +13,11 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(AndroidJUnit4.class)
 @SmallTest
-public class SendMessagesHelperTest {
+public class SendMessagesTest {
 
     @Test
-    public void processSentMessageTest() {
-        assertTrue(true);
+    public void sendMessage() {
+
     }
 
 /* Example testing code from Android training*/
