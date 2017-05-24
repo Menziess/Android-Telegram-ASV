@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(AndroidJUnit4.class)
 @SmallTest
-public class SendMessagesTest {
+public class InstrumentedTest {
 
     @Test
     public void sendMessage() {
