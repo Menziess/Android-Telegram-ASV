@@ -1,10 +1,12 @@
 package org.telegram.messenger;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
@@ -36,7 +38,7 @@ public class SendMessagesHelperTest {
 
     @Test
     public void editMessage() throws Exception {
-
+        assertNotEquals(true, true); // Testing Travis-CI test output log
     }
 
     @Test
