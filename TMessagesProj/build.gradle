@@ -125,24 +125,24 @@ android {
     }
 
     productFlavors {
-        x86 {
-            ndk {
-                abiFilter "x86"
-            }
-            versionCode = 2
-        }
-        armv7 {
-            ndk {
-                abiFilter "armeabi-v7a"
-            }
-            versionCode = 1
-        }
+//        x86 {
+//            ndk {
+//                abiFilter "x86"
+//            }
+//            versionCode = 2
+//        }
+//        armv7 {
+//            ndk {
+//                abiFilter "armeabi-v7a"
+//            }
+//            versionCode = 1
+//        }
     }
 
-    applicationVariants.all { variant ->
-        def abiVersion = variant.productFlavors.get(0).versionCode
-        variant.mergedFlavor.versionCode = defaultConfig.versionCode * 10 + abiVersion
-    }
+//    applicationVariants.all { variant ->
+//        def abiVersion = variant.productFlavors.get(0).versionCode
+//        variant.mergedFlavor.versionCode = defaultConfig.versionCode * 10 + abiVersion
+//    }
 
     defaultConfig {
         minSdkVersion 18
