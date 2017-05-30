@@ -38,7 +38,7 @@ public class SendMessagesHelperTest {
 
     @Test
     public void editMessage() throws Exception {
-        assertNotEquals(true, true); // Testing Travis-CI test output log
+
     }
 
     @Test
