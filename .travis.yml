@@ -65,3 +65,14 @@ before_script:
 script:
   - ./gradlew dependencies || true
   - ./gradlew connectedAndroidTest --stacktrace
+  - ./gradlew test --stacktrace
+
+notifications:
+    slack: stefans:guQ4vRvf0Tyi2iDilb1rgQAj
+
+cache:
+  apt: true
+  directories:
+    - ${TRAVIS_BUILD_DIR}/gradle/caches/
+    - ${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/
+    - ${TRAVIS_BUILD_DIR}/android-sdk/extras/
