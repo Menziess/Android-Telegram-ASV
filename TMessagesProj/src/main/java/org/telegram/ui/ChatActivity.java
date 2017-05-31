@@ -326,9 +326,9 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
     private final HashMap<String, ArrayList<MessageObject>> messagesByDays = new HashMap<>();
     protected final ArrayList<MessageObject> messages = new ArrayList<>();
     private final int[] maxMessageId = new int[] {Integer.MAX_VALUE, Integer.MAX_VALUE};
-    private final int[][] minMessageId = new int[] {Integer.MIN_VALUE, Integer.MIN_VALUE};
-    private final int[][] maxDate = new int[] {Integer.MIN_VALUE, Integer.MIN_VALUE};
-    private final int[][] minDate = new int[2];
+    private final int[] minMessageId = new int[] {Integer.MIN_VALUE, Integer.MIN_VALUE};
+    private final int[] maxDate = new int[] {Integer.MIN_VALUE, Integer.MIN_VALUE};
+    private final int[] minDate = new int[2];
     private final boolean[] endReached = new boolean[2];
     private final boolean[] cacheEndReached = new boolean[2];
     private final boolean[] forwardEndReached = new boolean[] {true, true};
@@ -375,19 +375,23 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
     private float startX = 0;
     private float startY = 0;
 
-    private final Runnable readRunnable = () -> {
-        if (readWhenResume && !messages.isEmpty()) {
-            for (int a = 0; a < messages.size(); a++) {
-                MessageObject messageObject = messages.get(a);
-                if (!messageObject.isUnread() && !messageObject.isOut()) {
-                    break;
+    private final Runnable readRunnable = new Runnable() {
+
+        @Override
+        public void run() {
+            if (readWhenResume && !messages.isEmpty()) {
+                for (int a = 0; a < messages.size(); a++) {
+                    MessageObject messageObject = messages.get(a);
+                    if (!messageObject.isUnread() && !messageObject.isOut()) {
+                        break;
+                    }
+                    if (!messageObject.isOut()) {
+                        messageObject.setIsRead();
+                    }
                 }
-                if (!messageObject.isOut()) {
-                    messageObject.setIsRead();
-                }
+                readWhenResume = false;
+                MessagesController.getInstance().markDialogAsRead(dialogId, messages.get(0).getId(), readWithMid, readWithDate, true, false);
             }
-            readWhenResume = false;
-            MessagesController.getInstance().markDialogAsRead(dialogId, messages.get(0).getId(), readWithMid, readWithDate, true, false);
         }
     };
 
