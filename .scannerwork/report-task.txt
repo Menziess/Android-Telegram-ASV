@@ -1,0 +1,5 @@
+projectKey=Telegram
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/Telegram
+ceTaskId=AVxgiuP4RZ1TF2o0QGvg
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVxgiuP4RZ1TF2o0QGvg
