@@ -1,8 +1,10 @@
 .idea/
 .gradle/
+.scannerwork/
 build/
 obj/
 *.iml
+*.apk
 local.properties
 TMessagesProj/.externalNativeBuild
-*.apk
+
