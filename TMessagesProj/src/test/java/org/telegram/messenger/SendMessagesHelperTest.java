@@ -1,12 +1,9 @@
 package org.telegram.messenger;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 
@@ -16,7 +13,6 @@ import static org.mockito.Mockito.mock;
 public class SendMessagesHelperTest {
 
     SendMessagesHelper sendMessagesHelper;
-    ArrayList<MessageObject> messages;
 
     @Before
     public void setUp() {
@@ -26,18 +22,17 @@ public class SendMessagesHelperTest {
     @Test
     public void testSendMessage() throws Exception {
 
-        this.messages = new ArrayList<>();
-        this.messages.add(
+        ArrayList<MessageObject> messages = new ArrayList<>();
+        messages.add(
             mock(MessageObject.class)
         );
-
         sendMessagesHelper.sendMessage(messages, 1);
-
-        assertTrue(true);
+        assertTrue(messages.size() == 1);
     }
 
     @Test
     public void editMessage() throws Exception {
+
 
     }
 
