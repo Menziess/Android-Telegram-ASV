@@ -3,7 +3,7 @@ package org.telegram.messenger.testing.suite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import org.telegram.messenger.InstrumentedTest;
+import org.telegram.messenger.SendMessagesTest;
 
 /**
  * Created by Stefan on 18-May-17.
@@ -13,7 +13,7 @@ import org.telegram.messenger.InstrumentedTest;
 // Runs all unit tests.
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        InstrumentedTest.class
+        SendMessagesTest.class
 })
 
 public class InstrumentedTestSuite {}
