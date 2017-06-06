@@ -57,6 +57,10 @@ android {
         }
     }
 
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
     dexOptions {
         jumboMode = true
     }
